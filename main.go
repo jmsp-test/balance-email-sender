@@ -13,9 +13,15 @@ func main() {
 	txData := database.ParseTxnsData(data)
 
 	user := email.User{
-		Name:         "José Sosa",
-		Email:        "jmsosa30@gmail.com",
+		ID:           0,
+		Name:         "José Pérez",
+		Email:        "jmsosa.tests@gmail.com",
 		Transactions: txData,
+	}
+
+	sender, err := database.ReadSenderEmail("./database/sender_email.yaml")
+	if err != nil {
+		log.Fatal(err)
 	}
 
 	subject, body, err := email.BuildEmail(user)
@@ -23,7 +29,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	err = email.SendEmail(subject, body)
+	err = email.SendEmail(user, sender, subject, body)
 	if err != nil {
 		log.Fatal(err)
 	}

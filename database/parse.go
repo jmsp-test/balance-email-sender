@@ -2,14 +2,23 @@ package database
 
 import (
 	"encoding/csv"
+	"io/ioutil"
 	"log"
 	"os"
+
+	"gopkg.in/yaml.v3"
 )
 
 type Transaction struct {
 	ID   string
 	Date string
 	Txn  string
+}
+
+type Sender struct {
+	ID       string `yaml:"id"`
+	Email    string `yaml:"email"`
+	Password string `yaml:"password"`
 }
 
 func ReadCSV(filepath string) [][]string {
@@ -52,4 +61,19 @@ func ParseTxnsData(data [][]string) []Transaction {
 	}
 
 	return txnsList
+}
+
+func ReadSenderEmail(filepath string) (Sender, error) {
+	configData, err := ioutil.ReadFile(filepath)
+	if err != nil {
+		return Sender{}, err
+	}
+
+	configSender := Sender{}
+	err = yaml.Unmarshal(configData, &configSender)
+	if err != nil {
+		return Sender{}, err
+	}
+
+	return configSender, nil
 }

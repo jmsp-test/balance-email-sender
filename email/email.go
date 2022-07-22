@@ -9,6 +9,7 @@ import (
 )
 
 type User struct {
+	ID           int
 	Name         string
 	Email        string
 	Transactions []database.Transaction
@@ -50,15 +51,15 @@ func BuildEmail(user User) (string, string, error) {
 	return subject, body, nil
 }
 
-func SendEmail(subject string, body string) error {
+func SendEmail(user User, sender database.Sender, subject string, body string) error {
 
 	// Sender data.
-	from := "jmsosa.tests@gmail.com"
-	password := "zdjeymjaozynvdlp"
+	from := sender.Email
+	password := sender.Password
 
 	// Receiver email address.
 	to := []string{
-		"jmsosa.tests@gmail.com",
+		user.Email,
 	}
 
 	// smtp server configuration.
