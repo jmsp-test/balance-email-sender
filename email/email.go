@@ -116,8 +116,8 @@ func BuildEmail(user UserEmail) (string, string, error) {
 		"Thanks again for your preference. Please find your account balance in the mail below.\n\n" +
 		"Total Balance is " + strgTotalBalance + "\n" +
 		strgNumTx +
-		"Average debit amount: " + strgAvrgCredit + "\n" +
-		"Average credit amount: " + strgAvrgDebit + "\n\n" +
+		"Average credit amount: " + strgAvrgCredit + "\n" +
+		"Average debit amount: " + strgAvrgDebit + "\n\n" +
 		"Best Regards,\nStori Card\n"
 
 	// fmt.Println(subject)
