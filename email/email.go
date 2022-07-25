@@ -120,8 +120,8 @@ func BuildEmail(user UserEmail) (string, string, error) {
 		"Average credit amount: " + strgAvrgDebit + "\n\n" +
 		"Best Regards,\nStori Card\n"
 
-	fmt.Println(subject)
-	fmt.Println(body)
+	// fmt.Println(subject)
+	// fmt.Println(body)
 
 	return subject, body, nil
 }

@@ -5,12 +5,6 @@ import (
 	"os"
 )
 
-type Transaction struct {
-	ID   string
-	Date string
-	Txn  string
-}
-
 func ReadCSV(filepath string) ([][]string, error) {
 	// Open file
 	f, err := os.Open(filepath)
