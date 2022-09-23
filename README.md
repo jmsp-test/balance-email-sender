@@ -1,4 +1,4 @@
-# Stori Code Challenge
+# Balance Email Sender
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -16,7 +16,7 @@
 <!-- INTRODUCTION -->
 ## Introduction
 
-This repository contains a code challenge from the company Stori Card. It is a backend code system able to process data from a csv file that contains the transaction history of an user and send the summary information in the form of an email to that same user.
+This repository contains a code challenge from the company Stori Card. It is a backend code system able to process data from a csv file that contains the transaction history of an user and send the summary balance information in the form of an email to that same user.
 
 <!-- CODE INTERFACE -->
 ## Code Interface
