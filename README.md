@@ -76,7 +76,7 @@ To run this project, is necessary to complete the next steps:
 1. Create a Docker image named stori-challenge from the Dockerfile in the project.
 
     ```sh
-    docker build -t stori-challenge .
+    docker build -t balance-email-sender .
     ```
 
 2. Verify that the image was created.
@@ -88,7 +88,7 @@ To run this project, is necessary to complete the next steps:
 2. Run the image.
 
     ```sh
-    docker run stori-challenge
+    docker run balance-email-sender
     ```
 
   ### Bash Scripts
