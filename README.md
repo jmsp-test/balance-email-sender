@@ -51,7 +51,7 @@ To run this project, is necessary to complete the next steps:
 1. Clone this project in your workspace. You can use the next command:
 
    ```sh
-   git clone https://github.com/jmsp-test/stori-code-challenge.git
+   git clone https://github.com/jmsp-test/balance-email-sender.git
    ```
 
 2. Modify the user information in /database/users.csv to the name and email of the receiver of the email. Fill it with your own data.
@@ -73,7 +73,7 @@ To run this project, is necessary to complete the next steps:
 
 ### Docker
 
-1. Create a Docker image named stori-challenge from the Dockerfile in the project.
+1. Create a Docker image named balance-email-sender from the Dockerfile in the project.
 
     ```sh
     docker build -t balance-email-sender .
